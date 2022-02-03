@@ -15,8 +15,6 @@ class Computer implements Comparable{
         this.owner = owner;
     }
 
-    
-
     public int compareTo(Object o){
         return this.serial - ((Computer)o).serial;
     }
@@ -34,13 +32,8 @@ public class CollectionDemo{
         computers.add(new Computer(8080, "localhost"));
 
         Iterator i = computers.iterator();
-        System.out.println("before");
-        while(i.hasNext()){
-            System.out.println(i.next());
-        }
 
         Collections.sort(computers);
-        System.out.println("===========\nafter");
         i = computers.iterator();
         while(i.hasNext()){
             System.out.println(i.next());
